@@ -7,9 +7,9 @@
 ```ruby
 sudo gem install cocoapods -v 0.38.2
 ```
-之后在执行`pod setup`时，由于`pod`工具已经升级到`1.xx`版本了，`pod`算法以及`Specs`库中的文件结构已经改变，所以它会默认拉取新版本的`Specs`库，这样就会出现旧版本`pod`新版本`Specs`库的情况，当执行`pod install`的时候会发生找不到`xxx`第三方库的情况。
+之后在执行`pod setup`时，由于`pod`工具目前已经更新到`1.xx`版本了，`pod`算法以及`Specs`库中的文件结构已经改变，所以它会默认拉取最新版本的 [Specs](https://github.com/CocoaPods/Specs) 库，这样就会出现旧版本`pod`新版本`Specs`库的情况，当执行`pod install`的时候会出现找不到`xxx`第三方库的情况。
 
-解决此问题的方案是需要在`Podfile`中指定`source`源地址：
+解决此问题的方案是需要在`Podfile`中指定老版本的`source`源地址：
 
 ``` 
 source "https://github.com/CocoaPods/Old-Specs"
