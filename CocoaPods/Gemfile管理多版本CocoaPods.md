@@ -12,13 +12,13 @@
 
 #### Gemfile Usage
 
-先贴一下官方链接 [Using a Gemfile](https://guides.cocoapods.org/using/a-gemfile.html) 
+先贴一下官方文档 [Using a Gemfile](https://guides.cocoapods.org/using/a-gemfile.html) 
 
 ##### 大致用法：
 
 1. 进入到工程目录下，调用`bundle init`命令，会创建一个`Gemfile`文件，此操作类似于`pod init`;
 
-2. 编辑刚才创建的`Gemfile`文件，在里面添加`gem "cocoapods", '1.5.0'`，这样就指定了`CocoaPods`的版本了；
+2. 编辑刚才创建的`Gemfile`文件，在里面添加`gem "cocoapods", '1.5.0'`，这样就指定了`CocoaPods`的版本了；在国内建议修改`source`源为：`source "https://gems.ruby-china.org"`，否则更新会很慢。
 
 3. 最后执行`bundle exec pod update` 或者`bundle exec pod install`命令即可，这样就会使用`Gemfile`内的版本安装了，不受你电脑上的`cocoapods`版本影响，比如你电脑上是`1.5.0`版本的，也可以用`1.4.0`版本的`pod`安装；这里需要说明的一点是，如果你直接调用`pod install` 或者 `pod uodate`，则默认使用的还是你本机上的`cocoapods`版本。
 
